@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in</title>
+    <meta name="description" content="A minimalist layout for Login pages. Built with Pico CSS." />
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Custom styles for this example -->
+    <script src="js/index.js"></script>
+    <script src="js/modal.js"></script>
+</head>
+
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li>
+                <a href="./" class="contrast"><strong>TodoList</strong></a>
+            </li>
+        </ul>
+        <ul class="nav">
+            <li>
+                <summary aria-haspopup="listbox" role="link" class="secondary"><a href="login.html">로그인</a></summary>
+            </li>
+            <li>
+                <summary aria-haspopup="listbox" role="link" class="secondary"><a href="signup.html">회원가입</a></summary>
+            </li>
+        </ul>
+    </nav>
+    <button class="contrast" data-target="modal-example" onClick="toggleModal(event)">
+        할일 작성하기
+    </button>
+    <main class="container">
+        <div id="todo">
+
+        </div>
+    </main>
+    <dialog id="modal-example">
+        <article>
+            <a href="#close" aria-label="Close" class="close" data-target="modal-example" onClick="toggleModal(event)">
+            </a>
+            <h3>할일!</h3>
+            <label for="title">할일</label>
+            <input type="text" id="title" name="title" placeholder="할일쓰기" required>
+            <label for="email">할일 자세히</label>
+            <textarea name="content" id="content" cols="70" rows="10"></textarea>
+            <small>너무 어렵다.....</small>
+            <footer>
+                <a href="" role="button" class="secondary" data-target="modal-example"
+                    onClick="toggleModal(event)">
+                    취소
+                </a>
+                <a href="" role="button" data-target="modal-example" onClick="toggleModal(event)" id="todowrite">
+                    작성
+                </a>
+            </footer>
+        </article>
+    </dialog>
+</body>
+<div id="response"></div>
+</html>

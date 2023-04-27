@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <title>회원가입 페이지</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Custom styles for this example -->
+
+    <script src="js/signup.js"></script>
+</head>
+
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li>
+                <a href="./" class="contrast"><strong>TodoList</strong></a>
+            </li>
+        </ul>
+        <ul class="nav">
+            <li>
+                <summary aria-haspopup="listbox" role="link" class="secondary"><a href="login.html">로그인</a></summary>
+            </li>
+            <li>
+                <summary aria-haspopup="listbox" role="link" class="secondary"><a href="signup.html">회원가입</a></summary>
+            </li>
+        </ul>
+    </nav>
+    <!-- Main -->
+    <main class="container">
+        <article class="grid">
+            <div>
+                <hgroup>
+                    <h1>Sign Up</h1>
+                    <h2>Signup pages</h2>
+                </hgroup>
+                <label for="email">이메일</label>
+                <input type="email" name="login" placeholder="Email" aria-label="Email" autocomplete="on" id="email"required />
+                <label for="password">비밀번호</label>
+                <input type="password" name="password" placeholder="Password" aria-label="Password" autocomplete="on"id="password" required />
+                <label for="name">이름</label>
+                <input type="text" name="name" placeholder="Name" aria-label="Name" id="name" required />
+                <div class="grid" style="padding:0px;">
+                    <fieldset>
+                        <label for="age">나이</label>
+                        <input type="number" name="age" placeholder="Age" aria-label="Age" id="age" required />
+                    </fieldset>
+                    <fieldset>
+                        <label for="gender">Gender</label>
+                        <select name="gender" id="gender">
+                            <option value="" selected>성별</option>
+                            <option value="M">남성</option>
+                            <option value="F">여성</option>
+                            <option value="O">그외</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <fieldset>
+                    <a href="login.html" class="contrast">login</a>
+                </fieldset>
+                <button class="contrast" id="signup">Sign-Up</button>
+            </div>
+            <div></div>
+        </article>
+    </main>
+</body>
+
+</html>

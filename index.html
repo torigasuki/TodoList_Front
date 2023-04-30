@@ -55,7 +55,7 @@
                     <summary>{{todo.id}}. {{todo.title}}</summary>
                     <p>내용:{{todo.content}}</p>
                     <div v-if='todo.is_done'>
-                        <p>완료시간: {{todo.completion_at}}</p>
+                        <p>완료시간: {{formatdate(todo.completion_at)}}</p>
                     </div>
                     <div v-else>
                         <p>수행여부:<input type="checkbox" v-bind:id="'is_done'+todo.id" name="is_done"

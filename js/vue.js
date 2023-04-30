@@ -51,6 +51,15 @@ new Vue({
             })
             location.reload();
         },
+        formatdate: function (date) {
+            const complete_date = new Date(date);
+            const year = complete_date.getFullYear();
+            const month = ("0" + (complete_date.getMonth() + 1)).slice(-2);
+            const day = ("0" + complete_date.getDate()).slice(-2);
+            const hours = ("0" + complete_date.getHours()).slice(-2);
+            const minutes = ("0" + complete_date.getMinutes()).slice(-2);
+            return `${year}-${month}-${day} ${hours}:${minutes}`;
+        },
         refresh: async function () {
             const response = await fetch('http://127.0.0.1:8000/users/api/token/refresh/', {
                 headers: {

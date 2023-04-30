@@ -1,11 +1,7 @@
+if(localStorage.getItem('access') !== null) {
+    window.location.href = "/"
+}
 window.onload = () => {
-    
-    if(localStorage.getItem('access') !== null) {
-        console.log('hi')
-        window.location.href = "/index.html"
-    }
-
-
     login = document.getElementById("login");
     login.addEventListener("click", async (event) => {
         const email = document.getElementById("email").value;

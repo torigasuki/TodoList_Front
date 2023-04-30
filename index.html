@@ -29,6 +29,9 @@
                     <summary aria-haspopup="listbox" role="link" class="secondary" id="user">사용자: {{user.username}}</summary>
                 </li>
                 <li>
+                    <summary aria-haspopup="listbox" role="link" class="secondary" id="user"><a href="signup.html" v-on:clicK="userdelete(user.user_id)">회원 탈퇴</a></summary>
+                </li>
+                <li>
                     <summary aria-haspopup="listbox" role="link" class="secondary"><a href="login.html" v-on:click="logout">로그아웃</a>
                     </summary>
                 </li>

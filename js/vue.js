@@ -9,6 +9,15 @@ new Vue({
             localStorage.removeItem('refresh')
             localStorage.removeItem('payload')
         },
+        userdelete: function (id) {
+            const response = fetch('http://127.0.0.1:8000/users/' + id + '/', {
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('access'),
+                },
+                method :'DELETE',
+            })
+            this.logout()
+        },
     },
     mounted() {
         const payload = localStorage.getItem('payload')
